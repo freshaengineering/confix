@@ -1,0 +1,17 @@
+version: 1
+generated_at: 2026-05-25T13:03:13Z
+internal: []
+trusted:
+  - action: actions/checkout
+    refs:
+      - v2.3.4
+    occurrences:
+      v2.3.4:
+        .github/workflows/ci.yml:
+          - jobs.mix_test.steps.[0].uses
+          - jobs.mix_credo.steps.[0].uses
+          - jobs.check_formatted.steps.[0].uses
+external: []
+local: []
+docker: []
+dynamic: []
