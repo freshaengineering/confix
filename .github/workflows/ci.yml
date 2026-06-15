@@ -33,7 +33,7 @@ jobs:
           - elixir: 1.11.2
             otp: 23.0.2
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
       - name: Install Dependencies
         run: |
           mix local.rebar --force
@@ -54,7 +54,7 @@ jobs:
           - elixir: 1.11.2
             otp: 23.0.2
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
       - name: Install Dependencies
         run: |
           mix local.rebar --force
@@ -75,5 +75,5 @@ jobs:
           - elixir: 1.11.2
             otp: 23.0.2
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
       - run: mix format --check-formatted
