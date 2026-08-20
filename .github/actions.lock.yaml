@@ -1,5 +1,5 @@
 version: 1
-generated_at: 2026-06-15T13:14:37Z
+generated_at: 2026-08-20T17:17:48Z
 internal: []
 trusted:
   - action: actions/checkout
@@ -15,3 +15,4 @@ external: []
 local: []
 docker: []
 dynamic: []
+nested_floating_deps: []
