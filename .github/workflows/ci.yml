@@ -1,9 +1,6 @@
 name: CI
 
 
-env:
-  ImageOS: ubuntu22
-
 on:
   pull_request:
   push:
