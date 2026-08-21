@@ -1,5 +1,5 @@
 version: 1
-generated_at: 2026-08-20T17:17:48Z
+generated_at: 2026-08-21T11:02:15Z
 internal: []
 trusted:
   - action: actions/checkout
@@ -8,10 +8,28 @@ trusted:
     occurrences:
       5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f:
         .github/workflows/ci.yml:
+          - jobs.mix_test.steps.[1].uses
+          - jobs.mix_credo.steps.[1].uses
+          - jobs.check_formatted.steps.[1].uses
+external:
+  - action: step-security/harden-runner
+    refs:
+      - 9af89fc71515a100421586dfdb3dc9c984fbf411
+    occurrences:
+      9af89fc71515a100421586dfdb3dc9c984fbf411:
+        .github/workflows/ci.yml:
           - jobs.mix_test.steps.[0].uses
           - jobs.mix_credo.steps.[0].uses
           - jobs.check_formatted.steps.[0].uses
-external: []
+  - action: step-security/mise-action
+    refs:
+      - 2796166110dee826668caddd4bffedae5116e7cd
+    occurrences:
+      2796166110dee826668caddd4bffedae5116e7cd:
+        .github/workflows/ci.yml:
+          - jobs.mix_test.steps.[2].uses
+          - jobs.mix_credo.steps.[2].uses
+          - jobs.check_formatted.steps.[2].uses
 local: []
 docker: []
 dynamic: []

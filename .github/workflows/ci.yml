@@ -9,28 +9,23 @@ on:
 
 jobs:
   mix_test:
-    name: Test (Erlang/OTP ${{matrix.otp}} | Elixir ${{matrix.elixir}})
+    name: Test
     runs-on:
       - runs-on
       - runner=2cpu-linux-x64
       - "run-id=${{ github.run_id }}"
-    container: hexpm/elixir:${{ matrix.elixir }}-erlang-${{ matrix.otp }}-alpine-3.11.6
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - elixir: 1.8.2
-            otp: 20.3.8.26
-          - elixir: 1.9.4
-            otp: 20.3.8.26
-          - elixir: 1.10.3
-            otp: 21.3.8.16
-          - elixir: 1.11.2
-            otp: 21.3.8.16
-          - elixir: 1.11.2
-            otp: 23.0.2
     steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2
+        with:
+          use-policy-store: true
+          api-key: ${{ secrets.GH_FRESHAENGINEERING_STEP_SECURITY_API_KEY }}
+
       - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
+
+      - name: Setup mise
+        uses: step-security/mise-action@2796166110dee826668caddd4bffedae5116e7cd # v4.2.0
+
       - name: Install Dependencies
         run: |
           mix local.rebar --force
@@ -44,14 +39,18 @@ jobs:
       - runs-on
       - runner=2cpu-linux-x64
       - "run-id=${{ github.run_id }}"
-    container: hexpm/elixir:${{ matrix.elixir }}-erlang-${{ matrix.otp }}-alpine-3.11.6
-    strategy:
-      matrix:
-        include:
-          - elixir: 1.11.2
-            otp: 23.0.2
     steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2
+        with:
+          use-policy-store: true
+          api-key: ${{ secrets.GH_FRESHAENGINEERING_STEP_SECURITY_API_KEY }}
+
       - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
+
+      - name: Setup mise
+        uses: step-security/mise-action@2796166110dee826668caddd4bffedae5116e7cd # v4.2.0
+
       - name: Install Dependencies
         run: |
           mix local.rebar --force
@@ -65,12 +64,16 @@ jobs:
       - runs-on
       - runner=2cpu-linux-x64
       - "run-id=${{ github.run_id }}"
-    container: hexpm/elixir:${{ matrix.elixir }}-erlang-${{ matrix.otp }}-alpine-3.11.6
-    strategy:
-      matrix:
-        include:
-          - elixir: 1.11.2
-            otp: 23.0.2
     steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2
+        with:
+          use-policy-store: true
+          api-key: ${{ secrets.GH_FRESHAENGINEERING_STEP_SECURITY_API_KEY }}
+
       - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
+
+      - name: Setup mise
+        uses: step-security/mise-action@2796166110dee826668caddd4bffedae5116e7cd # v4.2.0
+
       - run: mix format --check-formatted
