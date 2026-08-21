@@ -68,7 +68,7 @@ version = "26.2.5"
 backend = "core:erlang"
 
 [tools.erlang.options]
-precompiled_os = "ubuntu-22.04"
+precompiled_os = "ubuntu-24.04"
 
 [tools.erlang."platforms.linux-arm64"]
 checksum = "blake3:8e44de5b73c08a525f6116421189ea9bcbdb9dadccc6950bc1dfec48fed2e2ea"
