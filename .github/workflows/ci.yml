@@ -10,10 +10,7 @@ on:
 jobs:
   mix_test:
     name: Test
-    runs-on:
-      - runs-on
-      - runner=2cpu-linux-x64
-      - "run-id=${{ github.run_id }}"
+    runs-on: runs-on/fleet=ubuntu24-2cpu/env=production
     steps:
       - name: Harden the runner
         uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
@@ -35,10 +32,7 @@ jobs:
 
   mix_credo:
     name: Run credo
-    runs-on:
-      - runs-on
-      - runner=2cpu-linux-x64
-      - "run-id=${{ github.run_id }}"
+    runs-on: runs-on/fleet=ubuntu24-2cpu/env=production
     steps:
       - name: Harden the runner
         uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
@@ -60,10 +54,7 @@ jobs:
 
   check_formatted:
     name: Check formatted
-    runs-on:
-      - runs-on
-      - runner=2cpu-linux-x64
-      - "run-id=${{ github.run_id }}"
+    runs-on: runs-on/fleet=ubuntu24-2cpu/env=production
     steps:
       - name: Harden the runner
         uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
