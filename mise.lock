@@ -33,51 +33,47 @@ checksum = "sha256:04ba8654bd3bfb63fb477af2eea32516792de80bd86822a823fa23d851350
 url = "https://builds.hex.pm/builds/elixir/v1.16.2-otp-26.zip"
 
 [[tools.erlang]]
-version = "26.2.5"
-backend = "core:erlang"
-
-[tools.erlang."platforms.linux-arm64-musl"]
-checksum = "blake3:8e44de5b73c08a525f6116421189ea9bcbdb9dadccc6950bc1dfec48fed2e2ea"
-url = "https://github.com/erlang/otp/releases/download/OTP-26.2.5/otp_src_26.2.5.tar.gz"
-url_api = "https://api.github.com/repos/erlang/otp/releases/assets/165606312"
-install = "source"
-
-[tools.erlang."platforms.linux-x64-musl"]
-checksum = "blake3:8e44de5b73c08a525f6116421189ea9bcbdb9dadccc6950bc1dfec48fed2e2ea"
-url = "https://github.com/erlang/otp/releases/download/OTP-26.2.5/otp_src_26.2.5.tar.gz"
-url_api = "https://api.github.com/repos/erlang/otp/releases/assets/165606312"
-install = "source"
-
-[tools.erlang."platforms.macos-arm64"]
-checksum = "blake3:1bcd2feaf42ee9946a7e6b5716f0ccb163995def29886ca57662e6b5d762a060"
-url = "https://github.com/erlef/otp_builds/releases/download/OTP-26.2.5/otp-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/erlef/otp_builds/releases/assets/201843622"
-
-[tools.erlang."platforms.macos-x64"]
-checksum = "blake3:6f331bc0354e93d492d0dc9e0aac902fddbb57f656d0f11f40c80b26df9af131"
-url = "https://github.com/erlef/otp_builds/releases/download/OTP-26.2.5/otp-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/erlef/otp_builds/releases/assets/201844566"
-
-[tools.erlang."platforms.windows-x64"]
-checksum = "blake3:bd7e05051901ae818c79f3076f4b4180825383244432929d27cbf30b6fa302aa"
-url = "https://github.com/erlang/otp/releases/download/OTP-26.2.5/otp_win64_26.2.5.zip"
-url_api = "https://api.github.com/repos/erlang/otp/releases/assets/192640708"
-
-[[tools.erlang]]
-version = "26.2.5"
+version = "26.2.5.21"
 backend = "core:erlang"
 
 [tools.erlang.options]
 precompiled_os = "ubuntu-24.04"
 
 [tools.erlang."platforms.linux-arm64"]
-checksum = "blake3:8e44de5b73c08a525f6116421189ea9bcbdb9dadccc6950bc1dfec48fed2e2ea"
-url = "https://github.com/erlang/otp/releases/download/OTP-26.2.5/otp_src_26.2.5.tar.gz"
-url_api = "https://api.github.com/repos/erlang/otp/releases/assets/165606312"
-install = "source"
+checksum = "sha256:38e2e090edb9122f49629eb4b4f943321f1f6a9a349f272e51c54517c2476ca6"
+url = "https://builds.hex.pm/builds/otp/arm64/ubuntu-24.04/OTP-26.2.5.21.tar.gz"
 
 [tools.erlang."platforms.linux-x64"]
-checksum = "blake3:8e44de5b73c08a525f6116421189ea9bcbdb9dadccc6950bc1dfec48fed2e2ea"
-url = "https://github.com/erlang/otp/releases/download/OTP-26.2.5/otp_src_26.2.5.tar.gz"
-url_api = "https://api.github.com/repos/erlang/otp/releases/assets/165606312"
+checksum = "sha256:8f04a90fab00f2138d41c097585831c7ffd04277e0684e8d3d067ccfb49c5880"
+url = "https://builds.hex.pm/builds/otp/amd64/ubuntu-24.04/OTP-26.2.5.21.tar.gz"
+
+[[tools.erlang]]
+version = "26.2.5.21"
+backend = "core:erlang"
+
+[tools.erlang."platforms.linux-arm64-musl"]
+checksum = "sha256:e1fde86f4e2874d4c136221a34753b5b785d762b910fb3fb35a23a6a7faf0a64"
+url = "https://github.com/erlang/otp/releases/download/OTP-26.2.5.21/otp_src_26.2.5.21.tar.gz"
+url_api = "https://api.github.com/repos/erlang/otp/releases/assets/431065799"
 install = "source"
+
+[tools.erlang."platforms.linux-x64-musl"]
+checksum = "sha256:e1fde86f4e2874d4c136221a34753b5b785d762b910fb3fb35a23a6a7faf0a64"
+url = "https://github.com/erlang/otp/releases/download/OTP-26.2.5.21/otp_src_26.2.5.21.tar.gz"
+url_api = "https://api.github.com/repos/erlang/otp/releases/assets/431065799"
+install = "source"
+
+[tools.erlang."platforms.macos-arm64"]
+checksum = "sha256:f30141033b6620300f9babb5396464f5fd04f03c853df0341d6108d17959d755"
+url = "https://github.com/erlef/otp_builds/releases/download/OTP-26.2.5.21/otp-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/erlef/otp_builds/releases/assets/431150507"
+
+[tools.erlang."platforms.macos-x64"]
+checksum = "sha256:dde52d0ccc0436fd43d94ea2e22c058f9461655d75d07ec26cb0a1a13ea2de2c"
+url = "https://github.com/erlef/otp_builds/releases/download/OTP-26.2.5.21/otp-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/erlef/otp_builds/releases/assets/431157613"
+
+[tools.erlang."platforms.windows-x64"]
+checksum = "sha256:36c660f09918a63a833b5f01adde0c34264785890d3c890b2fe8f99dd95fdbb6"
+url = "https://github.com/erlang/otp/releases/download/OTP-26.2.5.21/otp_win64_26.2.5.21.zip"
+url_api = "https://api.github.com/repos/erlang/otp/releases/assets/431191502"
